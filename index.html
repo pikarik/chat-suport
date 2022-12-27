@@ -1,57 +1,49 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-    <head>
-        // TODO:ページの設定とスタイルシートの読み込み
-        <meta charaset="UTF-8"  />
-        <meta name="viewport" content="width=device-width"initial-scale=1.0"/>
-        <title>チャットサポート</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>チャットサポート</title>
 
-        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-        <link rel="stylesheet" href="index.css" />
-    </head>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-    <body>
-        // TODO:画面内容とスクリプトファイルの読み込み  
-        <header class="header">
-            // TODO:アプリタイトル部
-            <h1>チャットサポート</h1>
+  <body>
+    <header class="header">
+      <h1>チャットサポート</h1>
+    </header>
 
-        </header>
+    <section class="content">
+      <ul id="chat-area">
+        <li>
+          <div class="balloon balloon-r">
+            <p class="say say-r">こんにちは</p>
+          </div>
+        </li>
+        <li>
+          <div class="balloon">
+            <img class="img-circle" src="operator.png" alt="image" />
+            <p class="say">なんでも聞いてください。</p>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-        <section class="content">
-            // TODO:メッセージ表示部
-            <ul id="chat-area">
-                <li>
-                    <div class="balloon balloon-r">
-                        <p class="say say-r">こんにちは</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="balloon">
-                        <img class="img-circle" src="operator.png" alt="image" />
-                        <p class="say">なんでも聞いてください。</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
+    <footer class="footer">
+      <input
+        id="msg-send"
+        class="msg-input"
+        type="text"
+        placeholder="メッセージ（Shift+Enterで送信）"
+      />
+      <button class="btn-submit" type="button" onclick="sendMessage()">
+        送信
+      </button>
+    </footer>
 
-        <footer class="footer">
-            // TODO:メッセージ入力・送信部
-            <input>
-                id="msg-send"
-                class="msg-input"
-                type="text"
-                placeholder="メッセージ(Shift+Enterで送信)"
-            />
-            <button class="btn-submit" type="button" onclick="sendMessage()">
-            送信
-            </button>
-        </footer>
-
-        <script src="http://code.jquerycom/jquery-1.11.3.min.js"></script>
-        <script src="index.js"></script>
-    </body>
-
-
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
